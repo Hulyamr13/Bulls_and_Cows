@@ -36,5 +36,10 @@ def play_game(tries):
 
 
 print("Welcome to the cows and bulls game!")
-tries = int(input("How many tries do you want? "))
-play_game(tries)
+while True:
+    tries = int(input("How many tries do you want? "))
+    play_game(tries)
+    play_again = input("Do you want to play again? (y/n): ")
+    if play_again.lower() != 'y':
+        print("Thanks for playing!")
+        break
